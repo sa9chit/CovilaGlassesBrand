@@ -1,0 +1,6 @@
+.background {
+  background-image: url(../src/HardCodedData/eye.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

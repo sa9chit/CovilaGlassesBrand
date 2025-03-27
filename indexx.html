@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .marquee-container {
+        overflow: hidden;
+        white-space: nowrap;
+        background-color: aqua;
+        width: 150px;
+      }
+
+      .marquee-content {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="marquee-container">
+      <div class="marquee-content">
+        <!-- Original Content -->
+        <span>Item 1</span>
+        <span>Item 2</span>
+        <!-- Duplicated Content -->
+        <span>Item 3</span>
+        <span>Item 4</span>
+      </div>
+    </div>
+
+    <script>
+      const container = document.querySelector(".marquee-container");
+      const content = document.querySelector(".marquee-content");
+
+      content.innerHTML += content.innerHTML;
+
+      let position = 0;
+      let value = 2;
+
+      function animate() {
+        position -= value;
+
+        const contentWidth = content.scrollWidth / 2;
+        if (Math.abs(position) >= contentWidth) {
+          position = 0;
+        }
+
+        content.style.transform = `translateX(${position}px)`;
+        requestAnimationFrame(animate);
+      }
+      animate();
+    </script>
+  </body>
+</html>
