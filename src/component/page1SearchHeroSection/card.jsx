@@ -3,7 +3,7 @@ import { ProductData } from "../../HardCodedData/productData";
 import heart from "../../HardCodedData/heart.png";
 import heartRed from "../../HardCodedData/heartRed.png";
 
-export const ProductCard = ({
+const ProductCard = ({
   name,
   price,
   discount,
@@ -56,3 +56,4 @@ export const ProductCard = ({
     </div>
   );
 };
+export default ProductCard;

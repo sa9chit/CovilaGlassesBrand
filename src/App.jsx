@@ -1,7 +1,7 @@
 import "./App.css";
 import { Header1 } from "./component/page1SearchHeroSection/header1";
 import { Header2 } from "./component/page1SearchHeroSection/header2";
-import { HeroSection } from "./component/page1SearchHeroSection/heroSection";
+import HeroSection from "./component/page1SearchHeroSection/heroSection";
 import { Ui } from "./component/page2Product/ui";
 import { Locationn } from "./component/page3Location/location";
 function App() {
